@@ -29,6 +29,36 @@ $ git -v
 git version 2.43.0
 ```
 
+网络受限的情况下：
+
+```shell
+# 使用全新的云主机（大陆地区）
+# 2核CPU 4GB内存
+$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 22.04 LTS
+Release:        22.04
+Codename:       jammy
+
+# 安装Docker
+# 由于网络问题，先从官网下载安装包文件，然后上传到云主机
+# 下载地址（匹配上述操作系统）：https://download.docker.com/linux/ubuntu/dists/jammy/pool/stable/amd64/
+$ sudo dpkg -i ./containerd.io_1.7.18-1_amd64.deb \
+  ./docker-ce_27.0.3-1~ubuntu.22.04~jammy_amd64.deb \
+  ./docker-ce-cli_27.0.3-1~ubuntu.22.04~jammy_amd64.deb \
+  ./docker-buildx-plugin_0.15.1-1~ubuntu.22.04~jammy_amd64.deb \
+  ./docker-compose-plugin_2.28.1-1~ubuntu.22.04~jammy_amd64.deb
+
+# 安装成功
+$ docker -v
+Docker version 27.0.3, build 7d4bcd8
+
+# 系统自带GIT
+$ git --version
+git version 2.34.1
+```
+
 ## 2. 安装
 
 ```shell
