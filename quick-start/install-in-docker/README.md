@@ -49,6 +49,7 @@ remote: Total 70690 (delta 302), reused 438 (delta 210), pack-reused 70136
 Receiving objects: 100% (70690/70690), 39.92 MiB | 13.40 MiB/s, done.
 Resolving deltas: 100% (50603/50603), done.
 
+
 # 进入 Dify 源代码的 docker 目录，执行一键启动命令
 $ cd dify/docker
 $ cp .env.example .env
@@ -185,6 +186,7 @@ $ sudo docker compose up -d
  ✔ Container docker-worker-1          Started   2.9s
  ✔ Container docker-api-1             Started   2.9s
  ✔ Container docker-nginx-1           Started   3.9s
+
 
 # 检查是否所有容器都正常运行
 $ sudo docker compose ps
